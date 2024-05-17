@@ -140,7 +140,10 @@ namespace Landmarks.Scripts.Progress
         public void ResumeLastNavigationTimer(INavigationTask task)
         {
             if (_resumeOption != ResumeOptions.LastTrialFromProgress)
+            {
+                LM_Debug.Instance.Log("Not resuming navigation timer", 10);
                 return;
+            }
 
             var nodeSearch = _taskNodeLookup.Where(p => p.Value.HasAttribute("timeRemaining")).ToList();
             if (nodeSearch.Count == 1)
@@ -466,9 +469,31 @@ namespace Landmarks.Scripts.Progress
         private void WayfindingSkipSubtasks(IReadOnlyList<uint> ids, int numSubtask)
         {
             numSubtask %= 17;
-            if (numSubtask < 3) return; // If there are less than 3 subtasks, do not skip since it is only 2 ObjectLists
-            var leftover = (numSubtask - 3) % 5;
-            numSubtask -= leftover;
+            //if (numSubtask < 3) return; // If there are less than 3 subtasks, do not skip since it is only 2 ObjectLists
+            // var leftover = (numSubtask - 3) % 5;
+            // LM_Debug.Instance.Log($"Leftover: {leftover}", 10);
+            // numSubtask -= leftover;
+
+            if (numSubtask <6) // if there are less than 7 subtasks, skip 0 subtasks
+            {
+                numSubtask = 0;
+            }
+
+            else if (numSubtask < 9)
+            {
+                numSubtask = 5; // skip from movetrialstart (1) to navigate (5)
+            }
+
+            else if (numSubtask < 14)
+            {
+                numSubtask = 8; // skip from movetrialstart (1) to WalkToDistractorStart (9)
+            }
+
+            else if (numSubtask < 16)
+            {
+                numSubtask = 13; // skip from movetrialstart (1) to Navigate_RetracingTrial (13)
+            }
+
 
             if (ids.Count < numSubtask)
                 return;

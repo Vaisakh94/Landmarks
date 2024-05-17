@@ -634,7 +634,7 @@ namespace Valve.VR
 
             EVRInputError err;
 
-            /*if (framesAhead == 0j)
+            if (framesAhead == 0)
                 err = OpenVR.Input.GetPoseActionDataForNextFrame(handle, universeOrigin, ref poseActionData, poseActionData_size, inputSourceHandle);
             else
                 err = OpenVR.Input.GetPoseActionDataRelativeToNow(handle, universeOrigin, framesAhead * (Time.timeScale / SteamVR.instance.hmd_DisplayFrequency), ref poseActionData, poseActionData_size, inputSourceHandle);
@@ -643,7 +643,7 @@ namespace Valve.VR
             {
                 Debug.LogError("<b>[SteamVR]</b> GetPoseActionData error (" + fullPath + "): " + err.ToString() + " Handle: " + handle.ToString() + ". Input source: " + inputSource.ToString());
             }
-            */
+            
 
             if (active)
             {
