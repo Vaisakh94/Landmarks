@@ -808,6 +808,8 @@ public class ExplorationTask : ExperimentTask, INavigationTask
         taskLog.AddData(transform.name + "averageDistToWall", avgDist2wall.ToString());
         taskLog.AddData(transform.name + "_trialEndClosestTarget", closest_obj.name);
         taskLog.AddData(transform.name + "_trialEndClosestTargetDist", closestobjDistance.ToString());
+        
+
         //taskLog.AddData("testtesttest" + "_correctPosition", interfacePivots.correctPosition.ToString());
 
         if (logStartEnd)

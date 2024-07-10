@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -261,6 +261,7 @@ public class NavigationTask : ExperimentTask
                     MeshRenderer[] meshRenderers = target.GetComponentsInChildren<MeshRenderer>();
                     foreach (MeshRenderer meshRenderer in meshRenderers) meshRenderer.enabled = false;
                     // Instantiate a new instance of your red sphere
+                    
                     int numSpheres = 0;
                     if (numSpheres < destinations.objects.Distinct<GameObject>().Count())
                         // if the # of spheres is less than 9...
@@ -943,7 +944,9 @@ public class NavigationTask : ExperimentTask
         }
 
         transform.Find(startFromTarget.name + "_mask").gameObject.SetActive(false); // Target Red sphere mask: OFF
+        Debug.Log("Start Unmasking Timer");
         yield return new WaitForSeconds(unmaskStartObjectFor);
+        Debug.Log("Stop Unmasking Timer");
         foreach (var mr in startFromTarget.transform.GetComponentsInChildren<MeshRenderer>())
         {
             mr.gameObject.SetActive(false); // Start GO: OFF

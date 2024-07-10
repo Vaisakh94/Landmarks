@@ -141,7 +141,7 @@ namespace Landmarks.Scripts.Progress
         {
             if (_resumeOption != ResumeOptions.LastTrialFromProgress)
             {
-                LM_Debug.Instance.Log("Not resuming navigation timer", 10);
+                LM_Debug.Instance.Log("Not resuming navigation timer" + _resumeOption, 10);
                 return;
             }
 
