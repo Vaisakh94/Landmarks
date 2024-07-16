@@ -28,7 +28,8 @@ namespace ViveSR
                 public Transform lastHitTargetTransform;
                 public Vector3 gazeDirection;
                 public Vector3 gazeOrigin;
-                
+
+                public Vector3 hitPoint;
                 [SerializeField] private bool debug;
                 private SRanipal_VR_Debug _debugModule;
                 
@@ -156,6 +157,7 @@ namespace ViveSR
                     
                     if (Physics.Raycast(Camera.main.transform.position, gazeDirectionCombined, out var hit, lengthOfRay))
                     {
+                        hitPoint = hit.point;
                         var hitTransform = hit.transform;
                         if ( hitTransform == lastHitTransform) return;
                         if (excludeTags.Any(excludeTag => hitTransform.CompareTag(excludeTag))) return;
@@ -217,7 +219,19 @@ namespace ViveSR
                     }
                     return lastHitTransform.name;
                 }
-                
+
+                public string getHitPoint()
+                {
+                    if (hitPoint != null)
+                    {
+                        return hitPoint.ToString();
+                    }
+                    else
+                    {
+                        return "null";
+                    }
+                }
+
                 public string getLastHitTargetTransform()
                 {
                     if (lastHitTargetTransform == null)
