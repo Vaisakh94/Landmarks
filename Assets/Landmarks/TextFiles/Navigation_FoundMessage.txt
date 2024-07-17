@@ -2,4 +2,7 @@ Navigate again to the {0}.
 
 Repeat the same route you took in the previous trial. 
 
-Press the trigger using your index finger to select the red sphere you think is the {0}. 
+Press the trigger using your index finger 
+to select the red sphere you think is the {0}. 
+
+Now hit "Continue" using the trackpad with your thumb. 
