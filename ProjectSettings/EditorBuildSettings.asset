@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Landmarks/Scenes/Orientation_Task.unity
     guid: ba134087a56a040d293c930ceeb7dedf
+  - enabled: 1
+    path: Assets/Landmarks/Scenes/Exploration_Task_Modified.unity
+    guid: 8976d22eac768454a84e06f97b146073
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
