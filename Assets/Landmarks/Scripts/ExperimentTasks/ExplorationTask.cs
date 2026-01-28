@@ -9,6 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 using System.Linq;
 using Landmarks.Scripts.ExperimentTasks;
 using Landmarks.Scripts.Progress;
+using System.Globalization;
 
 public enum HideTargetOnStart_Exploration
 {
@@ -798,16 +799,16 @@ public class ExplorationTask : ExperimentTask, INavigationTask
 
         // More concise LM_TrialLog logging
         //taskLog.AddData(transform.name + "_start", startingLocation.name);
-        taskLog.AddData(transform.name + "_target", currentTarget.name);
-        taskLog.AddData(transform.name + "_actualPath", perfDistance.ToString());
-        taskLog.AddData(transform.name + "_optimalPath", optimalDistance.ToString());
-        taskLog.AddData(transform.name + "_excessPath", excessPath.ToString());
-        taskLog.AddData(transform.name + "_clockwiseTravel", clockwiseTravel.ToString());
-        taskLog.AddData(transform.name + "_duration", navTime.ToString());
-        taskLog.AddData(transform.name + "averageDistToBorder", avgDist2border.ToString());
-        taskLog.AddData(transform.name + "averageDistToWall", avgDist2wall.ToString());
-        taskLog.AddData(transform.name + "_trialEndClosestTarget", closest_obj.name);
-        taskLog.AddData(transform.name + "_trialEndClosestTargetDist", closestobjDistance.ToString());
+        taskLog.AddData(transform.name + "_target" + ";" currentTarget.name);
+        taskLog.AddData(transform.name + "_actualPath" + ';' perfDistance.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "_optimalPath"; optimalDistance.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "_excessPath"; excessPath.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "_clockwiseTravel"; clockwiseTravel.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "_duration"; navTime.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "averageDistToBorder"; avgDist2border.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "averageDistToWall"; avgDist2wall.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        taskLog.AddData(transform.name + "_trialEndClosestTarget"; closest_obj.name);
+        taskLog.AddData(transform.name + "_trialEndClosestTargetDist"; closestobjDistance.ToString(System.Globalization.CultureInfo.InvariantCulture));
         
 
         //taskLog.AddData("testtesttest" + "_correctPosition", interfacePivots.correctPosition.ToString());
@@ -815,10 +816,10 @@ public class ExplorationTask : ExperimentTask, INavigationTask
         if (logStartEnd)
         {
 
-            taskLog.AddData(transform.name + "_startX", startXYZ.x.ToString());
-            taskLog.AddData(transform.name + "_startZ", startXYZ.z.ToString());
-            taskLog.AddData(transform.name + "_endX", endXYZ.x.ToString());
-            taskLog.AddData(transform.name + "_endZ", endXYZ.z.ToString());
+            taskLog.AddData(transform.name + "_startX"; startXYZ.x.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            taskLog.AddData(transform.name + "_startZ"; startXYZ.z.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            taskLog.AddData(transform.name + "_endX"; endXYZ.x.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            taskLog.AddData(transform.name + "_endZ"; endXYZ.z.ToString(System.Globalization.CultureInfo.InvariantCulture));
 
         }
 
