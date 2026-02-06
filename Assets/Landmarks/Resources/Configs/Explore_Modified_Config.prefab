@@ -50,7 +50,7 @@ MonoBehaviour:
   nofullscreen: 0
   showFPS: 0
   filename: config.txt
-  experiment: ADRC_Pilot_Study
+  experiment: Supermarket_Explore
   ui: default
   runMode: 0
   conditions: []

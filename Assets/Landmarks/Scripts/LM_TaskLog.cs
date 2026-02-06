@@ -49,8 +49,8 @@ public class LM_TaskLog : MonoBehaviour
         // convert the list of label values into a formatted string for printing to the log
         foreach (var item in trialData)
         {
-            header += item.Key + ","; // append and add a tab
-            data += item.Value + ","; // append and add a tab
+            header += item.Key + ";"; // append and add a tab
+            data += item.Value + ";"; // append and add a tab
         }
 
         // Log the header (if empty file) and data

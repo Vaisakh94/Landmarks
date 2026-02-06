@@ -221,7 +221,7 @@ public class avatarLog : MonoBehaviour
 		if (other.gameObject.tag == "LocationColliders")
 		{
 
-			location = "EXITED TO Nowhere";
+			location = "At Nowhere";
 			previousLocation = other.gameObject.name;
 			Debug.Log("COLLIDER IS Exiting!!!! "+location);
 		}
