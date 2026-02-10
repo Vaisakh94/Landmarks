@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Landmarks/Scenes/Exploration_Task_Modified.unity
     guid: 8976d22eac768454a84e06f97b146073
+  - enabled: 1
+    path: Assets/Landmarks/Scenes/Wayfinding_Task_Modified.unity
+    guid: fa3d03f951a91144c9c7d1d797a28023
+  - enabled: 1
+    path: Assets/Landmarks/Scenes/Test.unity
+    guid: da225600505295843922c48fc463fa39
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
