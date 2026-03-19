@@ -39,7 +39,7 @@ public class LM_CompassPointing : ExperimentTask
     public ObjectList listOfLocations;
     public ObjectList listofTargets;
     public bool randomStartRotation;
-    public Vector3 compassPosOffset = new Vector3(0f, 0f, -2f);
+    public Vector3 compassPosOffset = new Vector3(0f, 1.0f, -2f);
     public Vector3 compassRotOffset = new Vector3(15f, 0f, 0f);
     [Min(0f)]
     public float secondsBeforeResponse = 0.0f; // how long before they can submit answer
@@ -93,9 +93,9 @@ public class LM_CompassPointing : ExperimentTask
 
         startTime = Time.time;
 
-        // Restrict Movement
+        // Restrict Movement (keyboard & mouse)
         manager.player.GetComponent<CharacterController>().enabled = false;
-
+        manager.player.GetComponent<FirstPersonController>().enabled = false;
 
         // ---------------------------------------------------------------------
         // Configure the Task-independent variables ----------------------------
@@ -170,7 +170,7 @@ public class LM_CompassPointing : ExperimentTask
             avatar.GetComponent<FirstPersonController>().ResetMouselook(); // reset the zero position to be our current cam orientation
 
             // Give control back to 1stPerson controller
-            if (format == Format.SOP) avatar.GetComponent<FirstPersonController>().enabled = true; // re-enable the controller
+            //if (format == Format.SOP) avatar.GetComponent<FirstPersonController>().enabled = true; // re-enable the controller
         }
         // FIXME add reoreintation for VR controllers
         // ---------------------------------------------------------------------
@@ -193,6 +193,8 @@ public class LM_CompassPointing : ExperimentTask
         if (format == Format.SOP)
         {
             hud.setMessage("Face the floating object in front of you. \nPress the trigger button to proceed.");
+            compass.gameObject.SetActive(true);
+            compass.interactable = true;
         }
         else if (format == Format.JRD)
         {
@@ -249,34 +251,34 @@ public class LM_CompassPointing : ExperimentTask
 
         oriented = false;
 
-        //setting where the task messages should appear (i.e., either above, below, left, or right to location object)
-        Vector3 huDPosition = location.transform.position;
-        Debug.Log("HUD Position is" + huDPosition);
+        // //setting where the task messages should appear (i.e., either above, below, left, or right to location object)
+        // Vector3 huDPosition = location.transform.position;
+        // Debug.Log("HUD Position is" + huDPosition);
 
-        //huDPosition.x -= 0.25f;
+        // //huDPosition.x -= 0.25f;
 
-        if (location.name == "Juice" || location.name == "Bananas")
-        {
-              huDPosition.z -= 1.0f; //subtracting 1 from z-axis
-              huDPosition.y += 0.4f; //adding 1 to y-axis
+        // if (location.name == "Juice" || location.name == "Bananas")
+        // {
+        //       huDPosition.z -= 1.0f; //subtracting 1 from z-axis
+        //       huDPosition.y += 0.4f; //adding 1 to y-axis
 
-        }
-        else if (location.name == "Pizza")
-        {
-            huDPosition.z -= 1.25f; //subtracting 1.5 from z-axis
-            huDPosition.y += 0.4f; //adding 1 to y-axis
-            //huDPosition.x -= 1.0f;
-        }
-        else
-        {
-            huDPosition.z += 1.0f; //adding 1 to z-axis
-            huDPosition.y += 0.4f; //adding 1 to y-axis
-            //huDPosition.x -= 1.0f;
-        }
+        // }
+        // else if (location.name == "Pizza")
+        // {
+        //     huDPosition.z -= 1.25f; //subtracting 1.5 from z-axis
+        //     huDPosition.y += 0.4f; //adding 1 to y-axis
+        //     //huDPosition.x -= 1.0f;
+        // }
+        // else
+        // {
+        //     huDPosition.z += 1.0f; //adding 1 to z-axis
+        //     huDPosition.y += 0.4f; //adding 1 to y-axis
+        //     //huDPosition.x -= 1.0f;
+        // }
 
-        hud.hudRig.transform.position = huDPosition; // setting position
+        // hud.hudRig.transform.position = huDPosition; // setting position
 
-        Debug.Log("Reset HUD Position is" + huDPosition);
+        // Debug.Log("Reset HUD Position is" + huDPosition);
 
         if (vrEnabled)
         {

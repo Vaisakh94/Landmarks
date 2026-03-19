@@ -21,16 +21,16 @@ public class LM_Compass : MonoBehaviour
     {
         if (interactable)
         {
-            //if (Input.GetKey(KeyCode.LeftArrow))
-            //{
-            //    pointer.transform.Rotate(new Vector3(0f, -1 * rotationSpeedMultiplier * Time.deltaTime, 0f), Space.Self);
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                pointer.transform.Rotate(new Vector3(0f, -1 * rotationSpeedMultiplier * Time.deltaTime, 0f), Space.Self);
 
-            //}
-            //else if (Input.GetKey(KeyCode.RightArrow))
-            //{
-            //    pointer.transform.Rotate(new Vector3(0f, rotationSpeedMultiplier * Time.deltaTime, 0f), Space.Self);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                pointer.transform.Rotate(new Vector3(0f, rotationSpeedMultiplier * Time.deltaTime, 0f), Space.Self);
 
-            //}
+            }
 
 
             // Making pointer point in the direction where the player is facing 

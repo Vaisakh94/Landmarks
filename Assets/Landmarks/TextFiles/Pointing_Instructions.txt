@@ -1,6 +1,6 @@
-Orientation Task
+Survey Task
 
-You will now be asked to face in the direction of a 
+You will now be asked to point in the direction of a 
 specific floating object in the supermarket from memory.
 
-Press "Continue" using the trackpad with your thumb, to begin.  
+Click "Continue" to begin.  
