@@ -1,7 +1,8 @@
-
 EXPLORATION
 
 You will now enter the virtual supermarket. 
-You have 10 minutes to walk around and learn the locations of the 6 floating target objects.
-Press the trigger button when you feel you have learned the locations of all 6 target objects.
-Press the "Continue" button to begin.
+You have 7 minutes to walk around and learn the locations of the 8 floating objects.
+When you feel confident that you know where all 8 floating objects are, press the spacebar. 
+However, even after pressing the spacebar, the task will continue to run until the 7 minutes are finished. 
+
+Click "Continue" to begin.

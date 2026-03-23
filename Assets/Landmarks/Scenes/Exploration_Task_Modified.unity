@@ -325155,8 +325155,7 @@ MonoBehaviour:
   message: {fileID: 4900000, guid: be09658d905b44554a5d01366bd52d7e, type: 3}
   masterText: 'Exploration complete!
 
-    Press "Continue" using the trackpad, to
-    proceed.  '
+    Click "Continue" to proceed.  '
   objects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}
@@ -555511,10 +555510,11 @@ MonoBehaviour:
   triggerOnEnd: 0
   instruction: {fileID: 0}
   message: {fileID: 4900000, guid: be09658d905b44554a5d01366bd52d7e, type: 3}
-  masterText: "You have 7 minutes to learn the locations of the \n6 floating target
-    objects in the supermarket. \n\nLet the experimenter know when you feel confident\nyou
-    have learned the locations of all the floating objects.  \n\nPress \"Continue\"
-    using the trackpad with your thumb, to begin. "
+  masterText: "EXPLORATION\r\n\r\nYou will now enter the virtual supermarket. \r\nYou
+    have 7 minutes to walk around and learn the locations of the 8 floating objects.\r\nWhen
+    you feel confident that you know where all 8 floating objects are, press the
+    spacebar. \r\nHowever, even after pressing the spacebar, the task will continue
+    to run until the 7 minutes are finished. \r\n\r\nClick \"Continue\" to begin."
   objects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}

@@ -1,8 +1,13 @@
 
 Welcome!
 
-Thank you for participating in this experiment. You will shortly be placed inside 
-a virtual supermarket, and your task is to walk around and learn the locations of the 
-6 floating target objects. If you have any questions, please inform the experimenter before beginning. 
+In this test, you will be placed inside a virtual supermarket. 
+Your task is to explore the supermarket and learn the locations of 8 floating objects. 
+You do not need to learn the locations of the objects on the shelves. 
 
-Press "Continue" using the trackpad, to begin.
+To move around the environment, use the arrow keys on the keyboard. 
+To look around the environment, move the mouse. 
+
+If you have any questions, please inform the experimenter before beginning. 
+
+Click "Continue" to proceed.

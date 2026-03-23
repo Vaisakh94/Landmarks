@@ -400057,9 +400057,12 @@ MonoBehaviour:
   triggerOnEnd: 0
   instruction: {fileID: 0}
   message: {fileID: 4900000, guid: be09658d905b44554a5d01366bd52d7e, type: 3}
-  masterText: "You will now be asked to navigate to the floating target objects.
-    \n\nAll floating objects will now be transformed into red spheres.\n\nPress \"Continue\"
-    using the trackpad with your thumb, to begin. "
+  masterText: "You will now be asked to navigate to a target floating object, from
+    another floating object, using your memory. You have a time limit of 30 seconds
+    for each trial, and will do this in total for 8 trials. Once you reach the target
+    floating object, press Enter to indicate that you have arrived. \r\n\r\nIn this
+    phase of the test, all floating objects will be transformed into yellow spheres.\r\n\r\nClick
+    \"Continue\" to begin.\r\n"
   objects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}

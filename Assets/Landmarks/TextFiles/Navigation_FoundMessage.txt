@@ -1,7 +1,7 @@
 Navigate again to the {0}.
 
-Repeat the same route you took in the previous trial. 
+Repeat the same route you just took to get there. 
 
-Press the enter button when you arrive at the {0}. 
+Press Enter when you arrive at the {0}. 
 
 Click "Continue" to begin. 
