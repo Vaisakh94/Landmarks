@@ -35,8 +35,10 @@ public class InstructionsTask : ExperimentTask {
     [TextArea] public string masterText;
 
     public ObjectList objects;
+    public ObjectList startObjects;
     public ObjectList[] multiObjects; // if you want the same subset from several lists
     private GameObject currentObject;
+    private GameObject currentStartObject;
     private string[] currentMultiObjects;
 
     public TextList texts;
@@ -97,6 +99,7 @@ public class InstructionsTask : ExperimentTask {
 
         if (texts) currentText = texts.currentString().Trim();
         if (objects) currentObject = objects.currentObject();
+        if (startObjects) currentStartObject = startObjects.currentObject();
         if (multiObjects.Length > 0)
         {
             currentMultiObjects = new string[multiObjects.Length];
@@ -138,7 +141,7 @@ public class InstructionsTask : ExperimentTask {
             {
                 string msg = message.text;
                 if (currentText != null) msg = string.Format(msg, currentText);
-                if (currentObject != null) msg = string.Format(msg, currentObject.name);
+                if (currentObject != null && currentStartObject != null) msg = string.Format(msg, currentObject.name, currentStartObject.name);
                 if (multiObjects.Length > 0) msg = string.Format(msg, currentMultiObjects);
                 hud.setMessage(msg);
             }
@@ -245,6 +248,11 @@ public class InstructionsTask : ExperimentTask {
             if (objects) {
                 objects.incrementCurrent ();
                 currentObject = objects.currentObject ();
+            }
+            if (startObjects)
+            {
+                startObjects.incrementCurrent();
+                currentStartObject = startObjects.currentObject();
             }
             if (texts) {
                 texts.incrementCurrent ();

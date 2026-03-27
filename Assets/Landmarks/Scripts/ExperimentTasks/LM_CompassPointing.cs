@@ -44,6 +44,7 @@ public class LM_CompassPointing : ExperimentTask
     public Vector3 compassPosOffset = new Vector3(0f, 0f, -2f);
     public Vector3 compassRotOffset = new Vector3(15f, 0f, 0f);
     [Min(0f)]
+    public float hudVerticalOffset = 0.5f;
     public float secondsBeforeResponse = 0.0f; // how long before they can submit answer
 
     public List<GameObject> questionItems; 
@@ -255,12 +256,6 @@ public class LM_CompassPointing : ExperimentTask
 
         oriented = false;
 
-        //setting where the task messages should appear on the HUD
-        Vector3 currenthuDPosition = hud.hudRig.transform.localPosition;
-        Debug.Log("HUD Position is" + currenthuDPosition);
-        currenthuDPosition.y += 0.3f;
-        hud.hudRig.transform.localPosition = currenthuDPosition;
-
         //huDPosition.x -= 0.25f;
 
         /* if (location.name == "Juice" || location.name == "Bananas")
@@ -295,7 +290,8 @@ public class LM_CompassPointing : ExperimentTask
 
 
     public override bool updateTask()
-    {
+    {   //Setting the HUD position 
+        hud.hudRig.transform.localPosition = new Vector3(0, hudVerticalOffset, 1.5f);
         hud.hudPanelOFF = 0f;
 
         if (skip) return true;

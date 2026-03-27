@@ -29,6 +29,8 @@ public class avatarLog : MonoBehaviour
 
 	private string location = "CURRENTLY NOWHERE";
 	private string previousLocation = "PREVIOUSLY Nowhere";
+	private float entryTime= 0f;
+	private float durationInLastHallway= 0f;
 	private string KeyPress;
 	private string TargetObjectVisibility;
 	private GameObject[] targetObjects;
@@ -49,6 +51,7 @@ public class avatarLog : MonoBehaviour
 		// set up vrInput if we're using VR
 		if (vrEnabled) vrInput = SteamVR_Input.GetActionSet<SteamVR_Input_ActionSet_landmarks>(default);
 
+		entryTime = Time.time;
 	}
 
 	private void Update()
@@ -90,15 +93,19 @@ public class avatarLog : MonoBehaviour
 		}
 
 		if (navLog)
-        {
+        {	
+			float liveDuration = Time.time - entryTime;
+
 			Debug.Log("---------------------------- " + location + " -------------------------------");
 			//print("AVATAR_POS	" + "\t" +  avatar.position.ToString("f3") + "\t" + "AVATAR_Body " + "\t" +  cameraCon.localEulerAngles.ToString("f3") +"\t"+ "AVATAR_Head " + cameraRig.localEulerAngles.ToString("f3"));
 			log.log("Avatar: \t" + controller.name + "\t" +
+					"Timestamp: \t" + Time.time.ToString("F2") + "\t" +
 					"Body Position (xyz): \t" + body.position.x + "\t" + body.position.y + "\t" + body.position.z + "\t" +
 					"Body Rotation (xyz): \t" + body.eulerAngles.x + "\t" + body.eulerAngles.y + "\t" + body.eulerAngles.z + "\t" +
 					"Camera Position (xyz): \t" + head.position.x + "\t" + head.position.y + "\t" + head.position.z + "\t" +
 					"Camera Rotation   (xyz): \t" + head.eulerAngles.x + "\t" + head.eulerAngles.y + "\t" + head.eulerAngles.z + "\t" +
-					"Location (Object/Hallway): \t" + location + "\t" +
+					"Location (Hallway): \t" + location + "\t" +
+					"Duration in Current Hallway: \t" + liveDuration.ToString("F2") + "\t"+
 					"Keypress(True/False): \t" + KeyPress + "\t" +
 
 			// Eyetracking Data
@@ -197,9 +204,12 @@ public class avatarLog : MonoBehaviour
     private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "LocationColliders")
-		{
+		{	
+			float durationInHallway = Time.time - entryTime;
+			previousLocation = location;
 			location = other.gameObject.name;
-			Debug.Log("COLLIDER IS TRIGGERING!!!! At " + location);
+			entryTime = Time.time;
+			Debug.Log("Spent" + durationInHallway.ToString("F2") + "s" +  " in "  + previousLocation);
 		}
 	}
 
@@ -216,7 +226,7 @@ public class avatarLog : MonoBehaviour
 		}
 	}*/
 
-	private void OnTriggerExit(Collider other)
+	/* private void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.tag == "LocationColliders")
 		{
@@ -225,7 +235,7 @@ public class avatarLog : MonoBehaviour
 			previousLocation = other.gameObject.name;
 			Debug.Log("COLLIDER IS Exiting!!!! "+location);
 		}
-	}
+	} */
 
 	private bool IsVisibleFromCamera(GameObject targetObject, Camera camera)
 	{

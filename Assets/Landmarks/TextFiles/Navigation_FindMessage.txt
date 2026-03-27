@@ -1,3 +1,5 @@
+You are currently at the {1}.
+
 Navigate to the {0}.
 
 Press the enter button once you arrive at the {0}.  

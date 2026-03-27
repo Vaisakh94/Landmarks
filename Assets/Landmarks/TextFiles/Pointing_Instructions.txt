@@ -1,6 +1,10 @@
 Survey Task
 
-You will now be asked to point in the direction of a 
-specific floating object in the supermarket from memory.
+You will now be asked to face in the direction of a 
+specific floating object in the supermarket, using your memory.
+
+You have 15 seconds for each trial, and a total of 8 trials to complete. 
+
+In these trials, the supermarket will be completely empty inside (the shelves will be removed). 
 
 Click "Continue" to begin.  

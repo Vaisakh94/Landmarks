@@ -34,10 +34,10 @@ public class AssignSubsets : ExperimentTask
     {
         TASK_START();
         // Find the PermuteStartTargetPairs_subset0 and PermuteStartTargetPairs_subset1 game objects
-        //GameObject subset0 = GameObject.Find("PermuteStartTargetPairs_subset0");
-        //GameObject subset1 = GameObject.Find("PermuteStartTargetPairs_subset1");
-        GameObject subset0 = GameObject.FindGameObjectWithTag("StartingLocations");
-        GameObject subset1 = GameObject.FindGameObjectWithTag("NavigationLocations");
+        GameObject subset0 = GameObject.Find("PermuteStartTargetPairs_subset0");
+        GameObject subset1 = GameObject.Find("PermuteStartTargetPairs_subset1");
+        //GameObject subset0 = GameObject.FindGameObjectWithTag("StartingLocations");
+        //GameObject subset1 = GameObject.FindGameObjectWithTag("NavigationLocations");
 
         // Assign the ObjectList components of these game objects to the NavigationTask script
         navigationTaskReference.listOfNavStarts = subset0.GetComponent<ObjectList>();
@@ -53,10 +53,12 @@ public class AssignSubsets : ExperimentTask
 
         // Assign the ObjectList components of these game objects to the InstructionsTask script
         instructionsTaskReference.objects = subset1.GetComponent<ObjectList>();
+        instructionsTaskReference.startObjects = subset0.GetComponent<ObjectList>();
         Debug.Log("Assigned subsets to NavigationTask, IncrementLists, InstructionsTask");
 
         // Assign the ObjectList components of these game objects to the InstructionsTask script (repeat trials)
         instructionsTaskReference2.objects = subset1.GetComponent<ObjectList>();
+        instructionsTaskReference2.startObjects = subset0.GetComponent<ObjectList>();
         Debug.Log("Assigned subsets to NavigationTask, IncrementLists, InstructionsTask");
 
         // Assign the ObjectList components of these game objects to the MoveObject script

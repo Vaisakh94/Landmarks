@@ -30,9 +30,11 @@ public class Objects_On_Shelf_Randomizer : MonoBehaviour
     private void OnValidate()
     {
         if (!Application.isPlaying)
-        {
+        {   
+            #if UNITY_EDITOR
             // We tell the Editor: "As soon as you're done with this frame, update the shelf."
             UnityEditor.EditorApplication.delayCall += PopulateShelf;
+            #endif
         }
     }
 
@@ -77,23 +79,24 @@ public class Objects_On_Shelf_Randomizer : MonoBehaviour
                 //This ensures the item stays aligned to the shelf but turns on its own feet.
                 Quaternion finalRotation = shelfRot * correction;
 
+                GameObject newItem = null;
+
                 // Step 4: Spawning the item.
                 #if UNITY_EDITOR
                 // In Editor Mode, we use PrefabUtility so the items stay linked to their source files.
-                GameObject newItem = (GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefab);
-                newItem.transform.position = spawnPos;
-                newItem.transform.SetParent(this.transform); // Parent first
+                newItem = (GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefab);
                 newItem.transform.position = spawnPos;
                 newItem.transform.rotation = finalRotation; // Apply rotation LAST
-                newItem.transform.localScale = Vector3.one; // FORCED FIX FOR SQUISHING
+                //newItem.transform.localScale = Vector3.one; // FORCED FIX FOR SQUISHING
                 #else
                 // In the actual Game/Build, we use standard Instantiate.
-                GameObject newItem = Instantiate(prefab, spawnPos, finalRotation);
+                newItem = Instantiate(prefab, spawnPos, finalRotation);
                 #endif
 
                 // Step 5: Organization and Cleanup.
                 newItem.name = prefab.name + " (RandomItem)";
                 newItem.transform.SetParent(this.transform);    // Put the item inside the shelf object.
+                newItem.transform.localScale = Vector3.one;    // Forced fix for squishing 
                 
                 // HideFlags prevents these temporary items from saving into your scene file,
                 // which keeps your file size small and prevents "double spawning."

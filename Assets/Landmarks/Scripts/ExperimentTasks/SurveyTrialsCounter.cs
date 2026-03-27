@@ -46,7 +46,7 @@ public class SurveyTrialsCounter : MonoBehaviour
             int currentTrialCount = 0;
             // Replace "listToTrack" with the specific ObjectList object you want to track
             //currentTrialCount += objectListReference.current;
-            currentTrialCount += taskListReference.repeatCount;
+            currentTrialCount += taskListReference.repeatCount - 1;
             finishedTrialCount = currentTrialCount;
         }
     }

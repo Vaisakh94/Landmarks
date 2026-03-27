@@ -1,6 +1,6 @@
-Navigate again to the {0}.
+You are back at the {1}.
 
-Repeat the same route you just took to get there. 
+Navigate again to the {0} by repeating the same route you just took to get there. 
 
 Press Enter when you arrive at the {0}. 
 
