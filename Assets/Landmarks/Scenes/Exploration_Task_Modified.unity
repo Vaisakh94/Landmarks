@@ -49474,7 +49474,7 @@ GameObject:
   - component: {fileID: 269834170}
   - component: {fileID: 269834169}
   m_Layer: 11
-  m_Name: Wine Bottle
+  m_Name: Wijnfles
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191383,6 +191383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5308465572058041532, guid: 0eaa84beeb5544ef08a8fa759a1176ce,
         type: 3}
+      propertyPath: customButtonText
+      value: Verder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308465572058041532, guid: 0eaa84beeb5544ef08a8fa759a1176ce,
+        type: 3}
       propertyPath: restrictMovement
       value: 1
       objectReference: {fileID: 0}
@@ -254750,10 +254755,9 @@ MonoBehaviour:
   triggerOnEnd: 0
   instruction: {fileID: 0}
   message: {fileID: 4900000, guid: be09658d905b44554a5d01366bd52d7e, type: 3}
-  masterText: 'Exploration complete!
-
-    Click "Continue" to proceed.  '
+  masterText: "Verkenning afgerond! \nKlik \"Verder\" om door te gaan. "
   objects: {fileID: 0}
+  startObjects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}
   blackout: 1
@@ -254761,7 +254765,7 @@ MonoBehaviour:
   instructionFont: {fileID: 0}
   instructionSize: 12
   actionButtonOn: 1
-  customButtonText: 
+  customButtonText: Verder
   restrictMovement: 1
   selfPaced: 1
 --- !u!114 &1258002114
@@ -319556,7 +319560,7 @@ GameObject:
   - component: {fileID: 1584518007}
   - component: {fileID: 1584518008}
   m_Layer: 11
-  m_Name: Bananas
+  m_Name: Bananen
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329997,7 +330001,7 @@ GameObject:
   - component: {fileID: 1642391020}
   - component: {fileID: 1642391021}
   m_Layer: 11
-  m_Name: Cereal Box
+  m_Name: Ontbijtgranen
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405772,7 +405776,7 @@ GameObject:
   - component: {fileID: 2026956106}
   - component: {fileID: 2026956107}
   m_Layer: 11
-  m_Name: Cake
+  m_Name: Taart
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428222,12 +428226,14 @@ MonoBehaviour:
   triggerOnEnd: 0
   instruction: {fileID: 0}
   message: {fileID: 4900000, guid: be09658d905b44554a5d01366bd52d7e, type: 3}
-  masterText: "EXPLORATION\r\n\r\nYou will now enter the virtual supermarket. \r\nYou
-    have 7 minutes to walk around and learn the locations of the 8 floating objects.\r\nWhen
-    you feel confident that you know where all 8 floating objects are, press the
-    spacebar. \r\nHowever, even after pressing the spacebar, the task will continue
-    to run until the 7 minutes are finished. \r\n\r\nClick \"Continue\" to begin."
+  masterText: "VERKENNING \r\n  \nU zult nu de virtuele supermarkt binnengaan. \r\n\r\nU
+    heeft 7 minuten om rond te lopen en de locatie van 8 zwevende objecten te onthouden.
+    \n\nAls u zeker bent dat u weet waar alle 8 zwevende objecten zich bevinden,
+    klik dan op de spatiebalk. \r\n\r\nZelfs nadat u de spatiebalk hebt ingedrukt
+    zal de taak blijven gaan tot de 7 minuten op zijn. \r\n\r\nKlik \"Verder\" om
+    door te gaan."
   objects: {fileID: 0}
+  startObjects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}
   blackout: 1
@@ -428235,7 +428241,7 @@ MonoBehaviour:
   instructionFont: {fileID: 12800000, guid: b51a3e520f9164da198dc59c8acfccd6, type: 3}
   instructionSize: 24
   actionButtonOn: 1
-  customButtonText: 
+  customButtonText: Verder
   restrictMovement: 1
   selfPaced: 1
 --- !u!4 &6279316239028938269

@@ -74794,7 +74794,7 @@ GameObject:
   - component: {fileID: 365688491}
   - component: {fileID: 365688492}
   m_Layer: 11
-  m_Name: Bananas
+  m_Name: Bananen
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120755,7 +120755,7 @@ GameObject:
   - component: {fileID: 565263367}
   - component: {fileID: 565263366}
   m_Layer: 11
-  m_Name: Cereal Box
+  m_Name: Ontbijtgranen
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257061,6 +257061,7 @@ MonoBehaviour:
   message: {fileID: 4900000, guid: 93056c72a86a72c438b2a7a51410cb5e, type: 3}
   masterText: 
   objects: {fileID: 0}
+  startObjects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}
   blackout: 1
@@ -257068,7 +257069,7 @@ MonoBehaviour:
   instructionFont: {fileID: 0}
   instructionSize: 12
   actionButtonOn: 1
-  customButtonText: 
+  customButtonText: Verder
   restrictMovement: 1
   selfPaced: 1
 --- !u!114 &1239629091
@@ -385093,7 +385094,7 @@ GameObject:
   - component: {fileID: 1861543224}
   - component: {fileID: 1861543223}
   m_Layer: 11
-  m_Name: Cake
+  m_Name: Taart
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425317,7 +425318,7 @@ GameObject:
   - component: {fileID: 2084470341}
   - component: {fileID: 2084470340}
   m_Layer: 11
-  m_Name: Wine Bottle
+  m_Name: Wijnfles
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445318,6 +445319,7 @@ MonoBehaviour:
   message: {fileID: 4900000, guid: 34890b77024ca4968b1e1ea08b6fe267, type: 3}
   masterText: 
   objects: {fileID: 0}
+  startObjects: {fileID: 0}
   multiObjects: []
   texts: {fileID: 0}
   blackout: 1

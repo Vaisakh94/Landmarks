@@ -24301,7 +24301,7 @@ MonoBehaviour:
   triggerOnStart: 0
   triggerOnEnd: 0
   instruction: {fileID: 0}
-  message: {fileID: 4900000, guid: 205a6b26dec3f41f5aae12ed747e893e, type: 3}
+  message: {fileID: 4900000, guid: 93bf783fb61d34b4887aedf1e60d753c, type: 3}
   masterText: 
   objects: {fileID: 8475965484860486574}
   startObjects: {fileID: 1632595996}
@@ -24312,7 +24312,7 @@ MonoBehaviour:
   instructionFont: {fileID: 12800000, guid: b51a3e520f9164da198dc59c8acfccd6, type: 3}
   instructionSize: 24
   actionButtonOn: 1
-  customButtonText: 
+  customButtonText: Verder
   restrictMovement: 1
   selfPaced: 1
 --- !u!114 &124475387
@@ -71710,7 +71710,7 @@ GameObject:
   - component: {fileID: 347090074}
   - component: {fileID: 347090073}
   m_Layer: 11
-  m_Name: Cake
+  m_Name: Taart
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259719,7 +259719,7 @@ MonoBehaviour:
   triggerOnStart: 0
   triggerOnEnd: 0
   instruction: {fileID: 0}
-  message: {fileID: 4900000, guid: 9640913f0e4984ce190c4c98b1787149, type: 3}
+  message: {fileID: 4900000, guid: 146ef69482885f44082154909513bd27, type: 3}
   masterText: 
   objects: {fileID: 8475965484860486574}
   startObjects: {fileID: 1632595996}
@@ -310411,12 +310411,13 @@ MonoBehaviour:
   triggerOnEnd: 0
   instruction: {fileID: 0}
   message: {fileID: 4900000, guid: be09658d905b44554a5d01366bd52d7e, type: 3}
-  masterText: "You will now be asked to navigate to a target floating object, from
-    another floating object, using your memory. \n\nYou have a time limit of 30 seconds
-    for each trial, and will do this in total for 8 trials. \n\nOnce you reach the
-    target floating object, press Enter to indicate that you have arrived. \r\n\r\nIn
-    this phase of the test, all floating objects will be transformed into yellow
-    spheres.\r\n\r\nClick \"Continue\" to begin.\r\n"
+  masterText: "U zult nu worden gevraagd om middels uw geheugen te navigeren naar
+    \neen van de zwevende objecten vanaf een ander zwevend object. \n\nU heeft een
+    tijdslimiet van 30 seconden voor elke opdracht en er zullen 8 opdrachten zijn.
+    \nZodra u bij het zwevende object bent aangekomen, klik dan op \u2018Enter\u2019
+    om aan te tonen dat u er bent. \r\r\n\r\nIn deze fase van de test worden alle
+    zwevende objecten getoond als gele bollen. \r\n\r\nKlik \u2018Verder\u2019 om
+    te beginnen."
   objects: {fileID: 0}
   startObjects: {fileID: 0}
   multiObjects: []
@@ -310426,7 +310427,7 @@ MonoBehaviour:
   instructionFont: {fileID: 0}
   instructionSize: 12
   actionButtonOn: 1
-  customButtonText: 
+  customButtonText: Verder
   restrictMovement: 1
   selfPaced: 1
 --- !u!114 &1516760334
@@ -318949,7 +318950,7 @@ GameObject:
   - component: {fileID: 1551674192}
   - component: {fileID: 1551674193}
   m_Layer: 11
-  m_Name: Bananas
+  m_Name: Bananen
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328238,7 +328239,7 @@ GameObject:
   - component: {fileID: 1602740385}
   - component: {fileID: 1602740384}
   m_Layer: 11
-  m_Name: Cereal Box
+  m_Name: Ontbijtgranen
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358559,7 +358560,7 @@ GameObject:
   - component: {fileID: 1754636374}
   - component: {fileID: 1754636373}
   m_Layer: 11
-  m_Name: Wine Bottle
+  m_Name: Wijnfles
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

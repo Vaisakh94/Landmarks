@@ -1,0 +1,9 @@
+U bevindt terug bij de {1}.
+
+Navigeer nogmaals naar de {0}. 
+
+Herhaal de route die u zojuist heeft genomen om daar te geraken. 
+
+Klik ‘Enter’ zodra u aankomt bij de {0}. 
+
+Klik ‘Verder’ om te beginnen. 

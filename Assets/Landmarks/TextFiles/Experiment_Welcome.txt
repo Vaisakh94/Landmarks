@@ -1,13 +1,12 @@
+Welkom! 
 
-Welcome!
+In deze test wordt u in een virtuele supermarkt geplaats. 
+De opdracht is om de supermarkt te verkennen en de locatie van 8 zwevende objecten te onthouden.  
+U hoeft de locatie van de objecten in de schappen niet te onthouden. 
 
-In this test, you will be placed inside a virtual supermarket. 
-Your task is to explore the supermarket and learn the locations of 8 floating objects. 
-You do not need to learn the locations of the objects on the shelves. 
+Om in de omgeving te beweging gebruikt u de pijlen op het toetsenbord.  
+Om in de omgeving rond te kijken beweegt u de muis. 
 
-To move around the environment, use the arrow keys on the keyboard. 
-To look around the environment, move the mouse. 
+Als u vragen heeft, stel deze dan aan de onderzoeker alvorens de test begint. 
 
-If you have any questions, please inform the experimenter before beginning. 
-
-Click "Continue" to proceed.
+Klik "Verder" om door te gaan. 

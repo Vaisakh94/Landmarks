@@ -1,6 +1,6 @@
 Survey Task
 
-You will now be asked to face in the direction of a 
+You will now be asked to face towards the direction of a 
 specific floating object in the supermarket, using your memory.
 
 You have 15 seconds for each trial, and a total of 8 trials to complete. 

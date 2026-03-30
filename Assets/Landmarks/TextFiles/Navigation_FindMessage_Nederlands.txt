@@ -1,0 +1,7 @@
+U bevindt zich momenteel op {1}.
+
+Navigeer naar {0}.
+
+Klik "Enter" zodra u aankomt bij de {0}.
+
+Klik "Verder" om te beginnen.
