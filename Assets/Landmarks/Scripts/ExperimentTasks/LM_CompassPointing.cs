@@ -197,7 +197,7 @@ public class LM_CompassPointing : ExperimentTask
         // Put up the HUD
         if (format == Format.SOP)
         {
-            string orientationmessage = string.Format("You are now facing the {0}. \nPress Enter to proceed.", location.name);
+            string orientationmessage = string.Format("U staat nu in de richting van {0}. \nDruk op Enter om verder te gaan.", location.name);
             hud.setMessage(orientationmessage);
             //hud.setMessage("Face the floating object in front of you. \nPress the trigger button to proceed.");
         }

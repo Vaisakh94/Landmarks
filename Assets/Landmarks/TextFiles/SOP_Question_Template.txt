@@ -1,2 +1,2 @@
-Face towards the {0}. 
-Press Enter when done.
+Ga in de richting van de {0} staan. 
+Druk op Enter als u klaar bent.

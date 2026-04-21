@@ -1,10 +1,10 @@
-Survey Task
+ORIËNTATIE
 
-You will now be asked to face towards the direction of a 
-specific floating object in the supermarket, using your memory.
+U zult nu worden gevraagd om middels de muis in de richting van een bepaald zwevend object 
+in de supermarkt te gaan staan zoals u zich dat herinnert. 
 
-You have 15 seconds for each trial, and a total of 8 trials to complete. 
+U heeft 15 seconden voor elke opdracht en voltooit in totaal 8 opdrachten. 
 
-In these trials, the supermarket will be completely empty inside (the shelves will be removed). 
+Tijdens deze opdrachten zal de supermarkt volledig leeg zijn (de schappen worden verwijderd). 
 
-Click "Continue" to begin.  
+Klik ‘Verder’ om te beginnen
